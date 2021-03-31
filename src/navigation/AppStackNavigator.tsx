@@ -7,7 +7,7 @@ const AppStack = createStackNavigator();
 
 const AppStackNavigator: React.FC = () => {
   return (
-    <AppStack.Navigator>
+    <AppStack.Navigator mode="modal" headerMode="none">
       <AppStack.Screen name={Routes.RADIO_PLAYER} component={RadioPlayer} />
     </AppStack.Navigator>
   );
