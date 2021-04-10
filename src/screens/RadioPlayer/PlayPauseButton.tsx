@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     borderColor: Colors.TERTIARY,
     justifyContent: 'center',
     alignItems: 'center',
-    ...commonStyles.buttonShadow,
+    ...commonStyles.shadow,
   },
   pPButtonInner: {
     backgroundColor: Colors.PRIMARY,

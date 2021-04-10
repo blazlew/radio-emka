@@ -1,7 +1,7 @@
 import {StyleSheet} from 'react-native';
 
 const commonStyles = StyleSheet.create({
-  buttonShadow: {
+  shadow: {
     shadowColor: '#000',
     shadowOffset: {
       width: 0,

@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
-import {StatusBar, StyleSheet} from 'react-native';
+import {StatusBar, StyleSheet, View} from 'react-native';
 import Config from 'react-native-config';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import Video from 'react-native-video';
-import Colors from '../../config/constants/colors';
+import Colors from '@config/constants/colors';
 import PlayPauseButton from './PlayPauseButton';
+import commonStyles from '@config/constants/commonStyles';
 
 const RadioPlayer: React.FC = () => {
   const [isPaused, setIsPaused] = useState(true);
@@ -15,18 +16,20 @@ const RadioPlayer: React.FC = () => {
         backgroundColor="transparent"
         barStyle="light-content"
       />
-      <Video
-        audioOnly
-        playInBackground
-        paused={isPaused}
-        poster="https://upload.wikimedia.org/wikipedia/commons/e/ec/John_Dunsworth.jpg" // TODO: add song posters
-        source={{
-          uri: Config.ESKA_LODZ_URL,
-        }}
-        style={styles.poster}
-        onBuffer={console.log} // TODO: add spinner while buffering, handle offline mode
-        onError={console.log} // TODO: smth
-      />
+      <View style={styles.posterBorder}>
+        <Video
+          audioOnly
+          playInBackground
+          paused={isPaused}
+          poster="https://brand.wsu.edu/wp-content/themes/brand/downloads/social/wsu-unit-social-badge.png" // TODO: add song posters
+          source={{
+            uri: Config.ESKA_LODZ_URL,
+          }}
+          style={styles.poster}
+          onBuffer={console.log} // TODO: add spinner while buffering, handle offline mode
+          onError={console.log} // TODO: smth
+        />
+      </View>
       <PlayPauseButton
         onPress={() => setIsPaused(!isPaused)}
         isPaused={isPaused}
@@ -42,11 +45,18 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     alignItems: 'center',
   },
-  poster: {
+  posterBorder: {
     alignSelf: 'stretch',
     marginHorizontal: 30,
+    padding: 7,
+    borderWidth: 2,
+    borderColor: Colors.TERTIARY,
+    backgroundColor: Colors.SECONDARY,
+    ...commonStyles.shadow,
+  },
+  poster: {
     aspectRatio: 1,
-    borderWidth: 1,
+    backgroundColor: Colors.PRIMARY,
   },
 });
 
