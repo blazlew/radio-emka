@@ -1281,7 +1281,15 @@
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.3.tgz#2ab0d5da2e5815f94b0b9d4b95d1e5f243ab2ca7"
   integrity sha512-KfRL3PuHmqQLOG+2tGpRO26Ctg+Cq1E01D2DMriKEATHgWLfeNDmq9e29Q9WIky0dQ3NPkd1mzYH8Lm936Z9qw==
 
-"@types/react-native@^0.64.0":
+"@types/react-native-video@^5.0.4":
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/@types/react-native-video/-/react-native-video-5.0.4.tgz#259ece17ccaf8a274008d77d105eeab5972117d1"
+  integrity sha512-0NzgoA1e8vMr0lvTJ4qDmwfiBXh0ju6GXLEHUUsgFuxtaqKGXsMDogzDFwqJ4gqsq5T3oQuiLffw2Se/rQAfFw==
+  dependencies:
+    "@types/react" "*"
+    "@types/react-native" "*"
+
+"@types/react-native@*", "@types/react-native@^0.64.0":
   version "0.64.2"
   resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.64.2.tgz#2e344aeec0b4eb21fb9eaa0ed8973245c5601d56"
   integrity sha512-w2y04h+GVLY+OMlFSmq4adPuS51XtEp1yUr83OvXf+moMQ4zDG1Q07HhyvYDXdc+BSS9ANHySBqVCz0hFxli9Q==
@@ -5429,6 +5437,11 @@ react-native-codegen@^0.0.6:
     flow-parser "^0.121.0"
     jscodeshift "^0.11.0"
     nullthrows "^1.1.1"
+
+react-native-config@^1.4.2:
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/react-native-config/-/react-native-config-1.4.2.tgz#cc39f22ed72c5cb06af1adf0ba70ef01593900b4"
+  integrity sha512-iTvCvThvFTH7SdiBcsxYtpLy86zglsh51ZBqFPPZ75tdrQMdlRnDNnb86kNjQf03KT0qs1nCMLRejfPMIim8iA==
 
 react-native-gesture-handler@^1.10.3:
   version "1.10.3"
