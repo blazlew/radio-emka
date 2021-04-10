@@ -27,7 +27,10 @@ const RadioPlayer: React.FC = () => {
         onBuffer={console.log} // TODO: add spinner while buffering, handle offline mode
         onError={console.log} // TODO: smth
       />
-      <PlayPauseButton onPress={() => setIsPaused(!isPaused)} />
+      <PlayPauseButton
+        onPress={() => setIsPaused(!isPaused)}
+        isPaused={isPaused}
+      />
     </SafeAreaView>
   );
 };

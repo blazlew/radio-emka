@@ -1,7 +1,9 @@
 import React from 'react';
 import {GestureResponderEvent, Pressable, StyleSheet, View} from 'react-native';
-import Colors from '../../config/constants/colors';
-import commonStyles from '../../config/constants/commonStyles';
+import Colors from '@config/constants/colors';
+import commonStyles from '@config/constants/commonStyles';
+import PauseIcon from '@assets/buttons/pause.svg';
+import PlayIcon from '@assets/buttons/play.svg';
 
 interface PlayPauseButtonProps {
   onPress: (event: GestureResponderEvent) => void;
@@ -10,7 +12,7 @@ interface PlayPauseButtonProps {
 
 const PlayPauseButton: React.FC<PlayPauseButtonProps> = ({
   onPress,
-  children,
+  isPaused,
 }) => {
   return (
     <View style={styles.pPButtonOuter}>
@@ -21,7 +23,16 @@ const PlayPauseButton: React.FC<PlayPauseButtonProps> = ({
           color: Colors.RIPPLE,
           borderless: true,
         }}>
-        {children}
+        {isPaused ? (
+          <PlayIcon
+            fill={Colors.TERTIARY}
+            width={30}
+            height={30}
+            style={styles.marginLeft}
+          />
+        ) : (
+          <PauseIcon fill={Colors.TERTIARY} width={30} height={30} />
+        )}
       </Pressable>
     </View>
   );
@@ -46,6 +57,9 @@ const styles = StyleSheet.create({
     borderRadius: 82 / 2,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  marginLeft: {
+    marginLeft: 5,
   },
 });
 
