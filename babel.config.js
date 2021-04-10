@@ -18,6 +18,8 @@ module.exports = {
         ],
         alias: {
           '@assets': './src/assets',
+          '@api': './src/api',
+          '@hooks': './src/hooks',
           '@components': './src/components',
           '@config': './src/config',
           '@navigation': './src/navigation',

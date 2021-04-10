@@ -40,6 +40,8 @@
     "baseUrl": "./src",                       /* Base directory to resolve non-absolute module names. */
     "paths": {
       "@assets/*": ["./assets/*"],
+      "@api/*": ["./api/*"],
+      "@hooks/*": ["./hooks/*"],
       "@components/*": ["./components/*"],
       "@config/*": ["./config/*"],
       "@navigation/*": ["./navigation/*"],
