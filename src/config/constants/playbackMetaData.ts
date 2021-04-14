@@ -1,3 +1,3 @@
 const ONE_SECOND = 1000;
 export const META_DATA_POLL_INTERVAL = 10 * ONE_SECOND;
-export const TRACK_POSTER_SIZE = '600';
+export const TRACK_POSTER_SIZE = '500';

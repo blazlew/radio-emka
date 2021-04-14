@@ -1,16 +1,17 @@
 import React, {useState} from 'react';
-import {StatusBar, StyleSheet, Text, View} from 'react-native';
+import {StatusBar, StyleSheet, Text} from 'react-native';
 import Config from 'react-native-config';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import Video from 'react-native-video';
 import Colors from '@config/constants/colors';
 import PlayPauseButton from './PlayPauseButton';
-import commonStyles from '@config/constants/commonStyles';
 import {useTrackMetadata} from '@hooks/useTrackMetadata';
+import Poster from './Poster';
 
 const RadioPlayer: React.FC = () => {
   const [isPaused, setIsPaused] = useState(true);
   const trackMetaData = useTrackMetadata();
+
   return (
     <SafeAreaView style={styles.safeArea}>
       <StatusBar
@@ -18,20 +19,18 @@ const RadioPlayer: React.FC = () => {
         backgroundColor="transparent"
         barStyle="light-content"
       />
-      <View style={styles.posterBorder}>
-        <Video
-          audioOnly
-          playInBackground
-          paused={isPaused}
-          poster={trackMetaData.image}
-          source={{
-            uri: Config.RADIO_STREAM_URL,
-          }}
-          style={styles.poster}
-          onBuffer={console.log} // TODO: add spinner while buffering, handle offline mode
-          onError={console.log} // TODO: smth
-        />
-      </View>
+      <Video
+        audioOnly
+        playInBackground
+        paused={isPaused}
+        source={{
+          uri: Config.RADIO_STREAM_URL,
+        }}
+        style={styles.audioPlayer}
+        onBuffer={console.log} // TODO: add spinner while buffering, handle offline mode
+        onError={console.log} // TODO: smth
+      />
+      <Poster imageUrl={trackMetaData.image} />
       <Text style={styles.songName}>{trackMetaData?.name}</Text>
       <PlayPauseButton
         onPress={() => setIsPaused(!isPaused)}
@@ -48,18 +47,9 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     alignItems: 'center',
   },
-  posterBorder: {
-    alignSelf: 'stretch',
-    marginHorizontal: 30,
-    padding: 7,
-    borderWidth: 2,
-    borderColor: Colors.TERTIARY,
-    backgroundColor: Colors.SECONDARY,
-    ...commonStyles.shadow,
-  },
-  poster: {
-    aspectRatio: 1,
-    backgroundColor: Colors.PRIMARY,
+  audioPlayer: {
+    position: 'absolute',
+    top: -1,
   },
   songName: {
     color: Colors.TERTIARY,
