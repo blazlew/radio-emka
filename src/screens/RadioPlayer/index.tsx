@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {StatusBar, StyleSheet, Text} from 'react-native';
+import React, {useEffect, useState} from 'react';
+import {BackHandler, StatusBar, StyleSheet, Text} from 'react-native';
 import Config from 'react-native-config';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import Video from 'react-native-video';
@@ -7,10 +7,50 @@ import Colors from '@config/constants/colors';
 import PlayPauseButton from './PlayPauseButton';
 import {useTrackMetadata} from '@hooks/useTrackMetadata';
 import Poster from './Poster';
+import {setupMusicControlNotification} from '@config/utils/musicControlService';
+import MusicControl, {Command} from 'react-native-music-control';
 
 const RadioPlayer: React.FC = () => {
   const [isPaused, setIsPaused] = useState(true);
   const trackMetaData = useTrackMetadata();
+
+  useEffect(() => {
+    setupMusicControlNotification();
+    configureNotificationListeners();
+  }, []);
+
+  useEffect(() => {
+    MusicControl.setNowPlaying({
+      title: trackMetaData.name,
+      artwork: trackMetaData.image,
+    });
+  }, [trackMetaData.image, trackMetaData.name]);
+
+  const configureNotificationListeners = () => {
+    MusicControl.on(Command.play, () => {
+      setIsPaused(false);
+      MusicControl.updatePlayback({
+        state: MusicControl.STATE_PLAYING,
+      });
+    });
+    MusicControl.on(Command.pause, () => {
+      setIsPaused(true);
+      MusicControl.updatePlayback({
+        state: MusicControl.STATE_PAUSED,
+      });
+    });
+    MusicControl.on(Command.stop, () => {
+      setIsPaused(true);
+      BackHandler.exitApp();
+    });
+  };
+
+  const toggleIsPaused = () => {
+    MusicControl.updatePlayback({
+      state: isPaused ? MusicControl.STATE_PLAYING : MusicControl.STATE_PAUSED,
+    });
+    setIsPaused(!isPaused);
+  };
 
   return (
     <SafeAreaView style={styles.safeArea}>
@@ -32,10 +72,7 @@ const RadioPlayer: React.FC = () => {
       />
       <Poster imageUrl={trackMetaData.image} />
       <Text style={styles.songName}>{trackMetaData?.name}</Text>
-      <PlayPauseButton
-        onPress={() => setIsPaused(!isPaused)}
-        isPaused={isPaused}
-      />
+      <PlayPauseButton onPress={toggleIsPaused} isPaused={isPaused} />
     </SafeAreaView>
   );
 };

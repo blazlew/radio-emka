@@ -91,7 +91,6 @@
 				F1CB75F8C5EEF0548F097B56 /* Pods-Emka-EmkaTests.debug.xcconfig */,
 				1E88F4B4EDE671E03FA9CB14 /* Pods-Emka-EmkaTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
