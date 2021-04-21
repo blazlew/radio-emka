@@ -22,7 +22,7 @@ const RadioPlayer: React.FC = () => {
       <Video
         audioOnly
         playInBackground
-        paused={isPaused}
+        muted={isPaused}
         source={{
           uri: Config.RADIO_STREAM_URL,
         }}
