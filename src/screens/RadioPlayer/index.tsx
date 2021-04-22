@@ -9,6 +9,7 @@ import {useTrackMetadata} from '@hooks/useTrackMetadata';
 import Poster from './Poster';
 import {setupMusicControlNotification} from '@config/utils/musicControlService';
 import MusicControl, {Command} from 'react-native-music-control';
+import {decode} from 'html-entities';
 
 const RadioPlayer: React.FC = () => {
   const [isPaused, setIsPaused] = useState(true);
@@ -72,7 +73,7 @@ const RadioPlayer: React.FC = () => {
         onError={console.log} // TODO: smth
       />
       <Poster imageUrl={trackMetaData.image} />
-      <Text style={styles.songName}>{trackMetaData?.name}</Text>
+      <Text style={styles.songName}>{decode(trackMetaData?.name)}</Text>
       <PlayPauseButton onPress={toggleIsPaused} isPaused={isPaused} />
     </SafeAreaView>
   );
@@ -92,6 +93,7 @@ const styles = StyleSheet.create({
   songName: {
     color: Colors.TERTIARY,
     fontSize: 26,
+    textAlign: 'center',
     textShadowColor: '#000',
     textShadowOffset: {height: 1, width: 0},
     textShadowRadius: 2,
