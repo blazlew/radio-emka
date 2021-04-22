@@ -205,6 +205,8 @@ PODS:
     - React-jsi (= 0.64.0)
     - React-perflogger (= 0.64.0)
   - React-jsinspector (0.64.0)
+  - react-native-background-timer (2.4.1):
+    - React-Core
   - react-native-config (1.4.2):
     - react-native-config/App (= 1.4.2)
   - react-native-config/App (1.4.2):
@@ -340,6 +342,7 @@ DEPENDENCIES:
   - React-jsi (from `../node_modules/react-native/ReactCommon/jsi`)
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
+  - react-native-background-timer (from `../node_modules/react-native-background-timer`)
   - react-native-config (from `../node_modules/react-native-config`)
   - react-native-music-control (from `../node_modules/react-native-music-control`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
@@ -400,6 +403,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsiexecutor"
   React-jsinspector:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
+  react-native-background-timer:
+    :path: "../node_modules/react-native-background-timer"
   react-native-config:
     :path: "../node_modules/react-native-config"
   react-native-music-control:
@@ -463,6 +468,7 @@ SPEC CHECKSUMS:
   React-jsi: 74341196d9547cbcbcfa4b3bbbf03af56431d5a1
   React-jsiexecutor: 06a9c77b56902ae7ffcdd7a4905f664adc5d237b
   React-jsinspector: 0ae35a37b20d5e031eb020a69cc5afdbd6406301
+  react-native-background-timer: 17ea5e06803401a379ebf1f20505b793ac44d0fe
   react-native-config: c98128a72bc2c3a1ca72caec0b021f0fa944aa29
   react-native-music-control: 5e7bae13749eed74a1ed176cb16df269c77b9dfc
   react-native-safe-area-context: f0906bf8bc9835ac9a9d3f97e8bde2a997d8da79

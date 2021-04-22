@@ -4,6 +4,7 @@ import {
   TRACK_POSTER_SIZE,
 } from '@config/constants/playbackMetaData';
 import {useEffect, useState} from 'react';
+import BackgroundTimer from 'react-native-background-timer';
 
 const INIT_META_DATA: SongMetaData = {
   id: '420',
@@ -31,10 +32,8 @@ export function useTrackMetadata() {
 
   useEffect(() => {
     fetchData();
-    const interval = setInterval(() => {
-      fetchData();
-    }, META_DATA_POLL_INTERVAL);
-    return () => clearInterval(interval);
+    BackgroundTimer.runBackgroundTimer(fetchData, META_DATA_POLL_INTERVAL);
+    return () => BackgroundTimer.stopBackgroundTimer();
   }, []);
 
   return currentTrackMetadata;
