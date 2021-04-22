@@ -2,12 +2,12 @@ import {makeRequest} from './common';
 
 export interface SongMetaData {
   artists: Array<{
-    id: string;
-    image: string;
+    id: string | null;
+    image: string | null;
     name: string;
   }>;
-  id: string;
-  image: string;
+  id: string | null;
+  image: string | null;
   name: string;
   status: number;
 }

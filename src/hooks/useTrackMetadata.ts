@@ -23,9 +23,11 @@ export function useTrackMetadata() {
   const fetchData = async () => {
     const metaData = await getPlaybackMetadata();
     if (metaData) {
-      metaData.image = metaData.image
-        .replace('[WIDTH]', TRACK_POSTER_SIZE)
-        .replace('[HEIGHT]', TRACK_POSTER_SIZE);
+      if (metaData.image) {
+        metaData.image = metaData.image
+          .replace('[WIDTH]', TRACK_POSTER_SIZE)
+          .replace('[HEIGHT]', TRACK_POSTER_SIZE);
+      }
       setCurrentTrackMetadata(metaData);
     }
   };

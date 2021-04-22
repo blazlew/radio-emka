@@ -1,3 +1,4 @@
+import {SongMetaData} from '@api/playbackMetadata';
 import Spinner from '@components/loading/Spinner';
 import Colors from '@config/constants/colors';
 import commonStyles from '@config/constants/commonStyles';
@@ -5,7 +6,7 @@ import React from 'react';
 import {Dimensions, Image, StyleSheet, View} from 'react-native';
 
 interface PosterProps {
-  imageUrl: string;
+  imageUrl: SongMetaData['image'];
 }
 
 const Poster: React.FC<PosterProps> = ({imageUrl}) => {

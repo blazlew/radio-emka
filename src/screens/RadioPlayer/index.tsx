@@ -67,6 +67,7 @@ const RadioPlayer: React.FC = () => {
           uri: Config.RADIO_STREAM_URL,
         }}
         style={styles.audioPlayer}
+        minLoadRetryCount={5}
         onBuffer={console.log} // TODO: add spinner while buffering, handle offline mode
         onError={console.log} // TODO: smth
       />
