@@ -3,6 +3,7 @@ import {
   META_DATA_POLL_INTERVAL,
   TRACK_POSTER_SIZE,
 } from '@config/constants/playbackMetaData';
+import {decode} from 'html-entities';
 import {useEffect, useState} from 'react';
 import BackgroundTimer from 'react-native-background-timer';
 
@@ -28,6 +29,7 @@ export function useTrackMetadata() {
           .replace('[WIDTH]', TRACK_POSTER_SIZE)
           .replace('[HEIGHT]', TRACK_POSTER_SIZE);
       }
+      metaData.name = decode(metaData.name);
       setCurrentTrackMetadata(metaData);
     }
   };
