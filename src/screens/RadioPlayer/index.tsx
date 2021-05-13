@@ -7,8 +7,9 @@ import Colors from '@config/constants/colors';
 import PlayPauseButton from './PlayPauseButton';
 import {useTrackMetadata} from '@hooks/useTrackMetadata';
 import Poster from './Poster';
-import {setupMusicControlNotification} from '@config/utils/musicControlService';
+import {setupMusicControlNotification} from '@config/functions/musicControlService';
 import MusicControl, {Command} from 'react-native-music-control';
+import DancingBarsBackground from './DancingBarsBackground';
 
 const RadioPlayer: React.FC = () => {
   const [isPaused, setIsPaused] = useState(true);
@@ -53,7 +54,7 @@ const RadioPlayer: React.FC = () => {
   };
 
   return (
-    <SafeAreaView style={styles.safeArea}>
+    <SafeAreaView style={styles.safeArea} edges={['top']}>
       <StatusBar
         translucent
         backgroundColor="transparent"
@@ -72,8 +73,10 @@ const RadioPlayer: React.FC = () => {
         onError={console.log} // TODO: smth
       />
       <Poster imageUrl={trackMetaData.image} />
-      <Text style={styles.songName}>{trackMetaData?.name}</Text>
-      <PlayPauseButton onPress={toggleIsPaused} isPaused={isPaused} />
+      <DancingBarsBackground shouldDance={!isPaused}>
+        <Text style={styles.songName}>{trackMetaData?.name}</Text>
+        <PlayPauseButton onPress={toggleIsPaused} isPaused={isPaused} />
+      </DancingBarsBackground>
     </SafeAreaView>
   );
 };
@@ -82,7 +85,7 @@ const styles = StyleSheet.create({
   safeArea: {
     backgroundColor: Colors.PRIMARY,
     flex: 1,
-    justifyContent: 'space-around',
+    paddingTop: 70,
     alignItems: 'center',
   },
   audioPlayer: {
