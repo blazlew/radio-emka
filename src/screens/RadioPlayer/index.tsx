@@ -68,9 +68,9 @@ const RadioPlayer: React.FC = () => {
           uri: Config.RADIO_STREAM_URL,
         }}
         style={styles.audioPlayer}
-        minLoadRetryCount={5}
+        minLoadRetryCount={10}
         onBuffer={console.log} // TODO: add spinner while buffering, handle offline mode
-        onError={console.log} // TODO: smth
+        onError={console.error} // TODO: smth
       />
       <Poster imageUrl={trackMetaData.image} />
       <DancingBarsBackground shouldDance={!isPaused}>

@@ -9,7 +9,7 @@ import BackgroundTimer from 'react-native-background-timer';
 
 const INIT_META_DATA: SongMetaData = {
   id: '420',
-  image: '', // TODO: Add m-logo from github,
+  image: '',
   name: 'Radio emka',
   status: 0,
   artists: [],
