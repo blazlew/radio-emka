@@ -5,7 +5,7 @@ import {StyleSheet, View} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import Bar from './Bar';
 
-const SEMI_TRANSPARENT_PRIMARY = `${Colors.PRIMARY}F2`;
+const SEMI_TRANSPARENT_PRIMARY = `${Colors.PRIMARY}E6`;
 
 interface DancingBarsBackgroundProps {
   shouldDance: boolean;
