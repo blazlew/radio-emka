@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {BackHandler, StatusBar, StyleSheet, Text} from 'react-native';
+import {BackHandler, StatusBar, StyleSheet} from 'react-native';
 import Config from 'react-native-config';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import Video from 'react-native-video';
@@ -10,6 +10,7 @@ import Poster from './Poster';
 import {setupMusicControlNotification} from '@config/functions/musicControlService';
 import MusicControl, {Command} from 'react-native-music-control';
 import DancingBarsBackground from './DancingBarsBackground';
+import TrackTitle from './TrackTitle';
 
 const RadioPlayer: React.FC = () => {
   const [isPaused, setIsPaused] = useState(true);
@@ -74,7 +75,7 @@ const RadioPlayer: React.FC = () => {
       />
       <Poster imageUrl={trackMetaData.image} />
       <DancingBarsBackground shouldDance={!isPaused}>
-        <Text style={styles.songName}>{trackMetaData?.name}</Text>
+        <TrackTitle>{trackMetaData?.name}</TrackTitle>
         <PlayPauseButton onPress={toggleIsPaused} isPaused={isPaused} />
       </DancingBarsBackground>
     </SafeAreaView>
@@ -91,14 +92,6 @@ const styles = StyleSheet.create({
   audioPlayer: {
     position: 'absolute',
     top: -1,
-  },
-  songName: {
-    color: Colors.TERTIARY,
-    fontSize: 26,
-    textAlign: 'center',
-    textShadowColor: '#000',
-    textShadowOffset: {height: 1, width: 0},
-    textShadowRadius: 2,
   },
 });
 

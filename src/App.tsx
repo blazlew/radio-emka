@@ -3,13 +3,18 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 import AppStackNavigator from './navigation/AppStackNavigator';
+import NotificationProvider from 'providers/NotificationProvider';
+import Notification from '@components/notification/Notification';
 
 const App = () => {
   return (
     <SafeAreaProvider>
-      <NavigationContainer>
-        <AppStackNavigator />
-      </NavigationContainer>
+      <NotificationProvider>
+        <NavigationContainer>
+          <AppStackNavigator />
+        </NavigationContainer>
+        <Notification />
+      </NotificationProvider>
     </SafeAreaProvider>
   );
 };
