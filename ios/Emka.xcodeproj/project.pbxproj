@@ -12,8 +12,8 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		BD3C76B0E1B72D440567D280 /* libPods-Emka-EmkaTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8BA2CC3DB089CDBC5545A32 /* libPods-Emka-EmkaTests.a */; };
-		FBC1169F5B50E056906A7B97 /* libPods-Emka.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 334CAEC976AEDE8665E1D1AA /* libPods-Emka.a */; };
+		CF47BD3076445E054450F4BD /* libPods-Emka.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6857BA06581912567A86F88E /* libPods-Emka.a */; };
+		F1D07B1254DC33C1E06DEFD1 /* libPods-Emka-EmkaTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8E3219AB5F92575BC2C2ABB /* libPods-Emka-EmkaTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,14 +36,14 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Emka/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Emka/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Emka/main.m; sourceTree = "<group>"; };
-		334CAEC976AEDE8665E1D1AA /* libPods-Emka.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Emka.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3ECF07A3A90BB66652969D3B /* Pods-Emka-EmkaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emka-EmkaTests.release.xcconfig"; path = "Target Support Files/Pods-Emka-EmkaTests/Pods-Emka-EmkaTests.release.xcconfig"; sourceTree = "<group>"; };
-		577ADE92CDE0FEEE479CA57D /* Pods-Emka-EmkaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emka-EmkaTests.debug.xcconfig"; path = "Target Support Files/Pods-Emka-EmkaTests/Pods-Emka-EmkaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1E88F4B4EDE671E03FA9CB14 /* Pods-Emka-EmkaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emka-EmkaTests.release.xcconfig"; path = "Target Support Files/Pods-Emka-EmkaTests/Pods-Emka-EmkaTests.release.xcconfig"; sourceTree = "<group>"; };
+		4E8BF2507FA03E3B415DEC38 /* Pods-Emka.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emka.debug.xcconfig"; path = "Target Support Files/Pods-Emka/Pods-Emka.debug.xcconfig"; sourceTree = "<group>"; };
+		6857BA06581912567A86F88E /* libPods-Emka.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Emka.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Emka/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		9DA576F9B241855EBC53015E /* Pods-Emka.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emka.debug.xcconfig"; path = "Target Support Files/Pods-Emka/Pods-Emka.debug.xcconfig"; sourceTree = "<group>"; };
-		B3BC8D36BBDF7FCC02912D9C /* Pods-Emka.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emka.release.xcconfig"; path = "Target Support Files/Pods-Emka/Pods-Emka.release.xcconfig"; sourceTree = "<group>"; };
-		B8BA2CC3DB089CDBC5545A32 /* libPods-Emka-EmkaTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Emka-EmkaTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8E3219AB5F92575BC2C2ABB /* libPods-Emka-EmkaTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Emka-EmkaTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F1CB75F8C5EEF0548F097B56 /* Pods-Emka-EmkaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emka-EmkaTests.debug.xcconfig"; path = "Target Support Files/Pods-Emka-EmkaTests/Pods-Emka-EmkaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FD25D7A849843254FC26751B /* Pods-Emka.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emka.release.xcconfig"; path = "Target Support Files/Pods-Emka/Pods-Emka.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD3C76B0E1B72D440567D280 /* libPods-Emka-EmkaTests.a in Frameworks */,
+				F1D07B1254DC33C1E06DEFD1 /* libPods-Emka-EmkaTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBC1169F5B50E056906A7B97 /* libPods-Emka.a in Frameworks */,
+				CF47BD3076445E054450F4BD /* libPods-Emka.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +83,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		0C377058D2F2285EC13E5434 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4E8BF2507FA03E3B415DEC38 /* Pods-Emka.debug.xcconfig */,
+				FD25D7A849843254FC26751B /* Pods-Emka.release.xcconfig */,
+				F1CB75F8C5EEF0548F097B56 /* Pods-Emka-EmkaTests.debug.xcconfig */,
+				1E88F4B4EDE671E03FA9CB14 /* Pods-Emka-EmkaTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		13B07FAE1A68108700A75B9A /* Emka */ = {
 			isa = PBXGroup;
 			children = (
@@ -96,24 +107,12 @@
 			name = Emka;
 			sourceTree = "<group>";
 		};
-		1EC564BB93781389C84CAF87 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				9DA576F9B241855EBC53015E /* Pods-Emka.debug.xcconfig */,
-				B3BC8D36BBDF7FCC02912D9C /* Pods-Emka.release.xcconfig */,
-				577ADE92CDE0FEEE479CA57D /* Pods-Emka-EmkaTests.debug.xcconfig */,
-				3ECF07A3A90BB66652969D3B /* Pods-Emka-EmkaTests.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				334CAEC976AEDE8665E1D1AA /* libPods-Emka.a */,
-				B8BA2CC3DB089CDBC5545A32 /* libPods-Emka-EmkaTests.a */,
+				6857BA06581912567A86F88E /* libPods-Emka.a */,
+				A8E3219AB5F92575BC2C2ABB /* libPods-Emka-EmkaTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -133,7 +132,7 @@
 				00E356EF1AD99517003FC87E /* EmkaTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
-				1EC564BB93781389C84CAF87 /* Pods */,
+				0C377058D2F2285EC13E5434 /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -156,11 +155,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "EmkaTests" */;
 			buildPhases = (
-				93987475F9F3DFAA36DBA51C /* [CP] Check Pods Manifest.lock */,
+				DB4CB7E2EC822F3E2FA0A597 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				7D5C22B06EECE0277BA94DAB /* [CP] Copy Pods Resources */,
+				A132290352A7CE6843713EA8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,13 +175,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Emka" */;
 			buildPhases = (
-				45B8CF1B9FF98F82B6C1292B /* [CP] Check Pods Manifest.lock */,
+				B394165CD2753671243A9EDA /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				3AF7DFC3FC761EE6AFEEBCF5 /* [CP] Copy Pods Resources */,
+				74746CEF9C11480C85B2E57E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -263,7 +262,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
-		3AF7DFC3FC761EE6AFEEBCF5 /* [CP] Copy Pods Resources */ = {
+		74746CEF9C11480C85B2E57E /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -280,7 +279,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Emka/Pods-Emka-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		45B8CF1B9FF98F82B6C1292B /* [CP] Check Pods Manifest.lock */ = {
+		A132290352A7CE6843713EA8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Emka-EmkaTests/Pods-Emka-EmkaTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Emka-EmkaTests/Pods-Emka-EmkaTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Emka-EmkaTests/Pods-Emka-EmkaTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B394165CD2753671243A9EDA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -302,24 +318,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7D5C22B06EECE0277BA94DAB /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Emka-EmkaTests/Pods-Emka-EmkaTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Emka-EmkaTests/Pods-Emka-EmkaTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Emka-EmkaTests/Pods-Emka-EmkaTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		93987475F9F3DFAA36DBA51C /* [CP] Check Pods Manifest.lock */ = {
+		DB4CB7E2EC822F3E2FA0A597 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -393,7 +392,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 577ADE92CDE0FEEE479CA57D /* Pods-Emka-EmkaTests.debug.xcconfig */;
+			baseConfigurationReference = F1CB75F8C5EEF0548F097B56 /* Pods-Emka-EmkaTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -420,7 +419,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3ECF07A3A90BB66652969D3B /* Pods-Emka-EmkaTests.release.xcconfig */;
+			baseConfigurationReference = 1E88F4B4EDE671E03FA9CB14 /* Pods-Emka-EmkaTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -444,7 +443,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9DA576F9B241855EBC53015E /* Pods-Emka.debug.xcconfig */;
+			baseConfigurationReference = 4E8BF2507FA03E3B415DEC38 /* Pods-Emka.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -470,7 +469,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B3BC8D36BBDF7FCC02912D9C /* Pods-Emka.release.xcconfig */;
+			baseConfigurationReference = FD25D7A849843254FC26751B /* Pods-Emka.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
